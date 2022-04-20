@@ -187,12 +187,12 @@ public:
             currNode = MH;
         }
 
+        //условие выхода из рекурсии
         if (listNodeName.at(0) == -1 && currNode->prevNode == nullptr) {
             return; //put all elements to graph, and get MainHead node...... stop all
         }
 
-        int ind = 0;
-        ind = checkPresentNode(currNode, listNodeName); //must return index of element in listNodeNam
+        int ind = checkPresentNode(currNode, listNodeName); //must return index of element in listNodeNam
 
         if (listNodeName.at(ind) != -1) {
             tNode = new Node(listNodeName.at(ind), currNode);
@@ -227,7 +227,7 @@ public:
     }
 
     void testBuild() {
-        buildGraph({1,2,3,4,5,-1}, nullptr);
+        buildGraph({1,2,3,-1}, nullptr);
 
 
 
